@@ -10,13 +10,13 @@ Vue.config.productionTip = false
  // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
-    apiKey: "AIzaSyBrQBRxyTNMRI-APgUatVxzvez9mXMqd4s",
-    authDomain: "nuxtfirebase-a9c49.firebaseapp.com",
-    projectId: "nuxtfirebase-a9c49",
-    storageBucket: "nuxtfirebase-a9c49.appspot.com",
-    messagingSenderId: "137414784237",
-    appId: "1:137414784237:web:78ec2066d0ac8c88f088e4",
-    measurementId: "G-0Z7CJ2XE6S"
+    apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+    authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.VUE_APP_FIREBASE_DATABASE_URL,
+    projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGE_SENDER_ID,
+    appId: process.env.VUE_APP_FIREBASE_APP_ID,
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
